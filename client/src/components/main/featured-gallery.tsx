@@ -1,23 +1,21 @@
 import { useState } from "react";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Image01Icon } from "@hugeicons/core-free-icons";
-// import questpayImg from "@/assets/projects/questpay.png";
 import orizonImg from "@/assets/projects/orizon.png";
-import questbaseImg from "@/assets/projects/questbase.png";
-import periwinkleImg from "@/assets/projects/periwinkle.png";
-import boxstreamzImg from "@/assets/projects/boxstreamz.png";
 
 type GalleryItem = {
   src?: string;
   alt: string;
 };
 
+// TODO(alex): drop screenshots into src/assets/projects/ and wire them up the
+// same way as orizonImg. A frame with no `src` renders an empty placeholder
+// rather than a broken image, so this is safe to ship half-filled.
 const FRAMES: GalleryItem[] = [
-  // { src: questpayImg, alt: "Questpay landing page" },
   { src: orizonImg, alt: "Orizon landing page" },
-  { src: questbaseImg, alt: "Quest Base landing page" },
-  { src: periwinkleImg, alt: "Periwinkle landing page" },
-  { src: boxstreamzImg, alt: "BoxStreamz streaming homepage" },
+  { alt: "pxxl.app dashboard" },
+  { alt: "Settlr merchant dashboard" },
+  { alt: "Blincs streaming interface" },
 ];
 
 function Peg({ className }: { className: string }) {

@@ -40,8 +40,20 @@ export const contactSchema = z.object({
 
 export type ContactFormValues = z.infer<typeof contactSchema>;
 
-export const CONTACT_EMAIL = "codewithjacksun@gmail.com";
-export const WHATSAPP_NUMBER = "2348137411338";
+// TODO(alex): your real address — this is what the contact page shows and what
+// the form falls back to while CONTACT_FORM_URL is empty.
+export const CONTACT_EMAIL = "hello@example.com";
+// TODO(alex): your WhatsApp number in international format, no + or spaces.
+export const WHATSAPP_NUMBER = "2340000000000";
 export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
-export const QUESTBASE_FORM_URL =
-  "https://questbase.onrender.com/f/dfgagmbp";
+
+/**
+ * Where the contact form POSTs.
+ *
+ * DELIBERATELY EMPTY. The original pointed at a form endpoint belonging to the
+ * developer this template came from, so every enquiry sent through this page
+ * would have landed in HIS inbox — silently, and looking like success. Until
+ * you put your own endpoint here (Formspree, Web3Forms, your own API, …) the
+ * form refuses to submit and points people at email instead.
+ */
+export const CONTACT_FORM_URL = "";

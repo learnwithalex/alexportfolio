@@ -18,7 +18,7 @@ import {
   inquiryTypes,
   CONTACT_EMAIL,
   WHATSAPP_LINK,
-  QUESTBASE_FORM_URL,
+  CONTACT_FORM_URL,
   type ContactFormValues,
 } from "@/schemas/contact";
 import { countries } from "@/constants/countries";
@@ -52,9 +52,16 @@ export default function Contact() {
     const country = countries.find((c) => c.code === values.country);
     const inquiry = inquiryTypes.find((t) => t.value === values.type);
 
+    // No endpoint configured yet — say so plainly rather than posting into the
+    // void (or, worse, into someone else's inbox) and reporting success.
+    if (!CONTACT_FORM_URL) {
+      toast.error(`Contact form isn't wired up yet — email ${CONTACT_EMAIL} instead.`);
+      return;
+    }
+
     try {
       await axios.post(
-        QUESTBASE_FORM_URL,
+        CONTACT_FORM_URL,
         {
           name: values.name,
           email: values.email,
@@ -238,25 +245,6 @@ export default function Contact() {
             {isSubmitting ? "Sending…" : "Send message"}
           </button>
           </motion.form>
-
-          <p className="mt-4 flex items-center justify-center gap-1.5 text-xs text-muted sm:justify-start">
-            <span>Powered by</span>
-            <a
-              href="https://questbase.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-main transition-opacity hover:opacity-80"
-            >
-              <img
-                src="https://questbase.vercel.app/logo.svg"
-                alt=""
-                className=" h-3.5 w-auto"
-              />
-              <span className="font-medium underline decoration-muted/40 underline-offset-2">
-                Quest Base
-              </span>
-            </a>
-          </p>
         </div>
 
         <motion.aside

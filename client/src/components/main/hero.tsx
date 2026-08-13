@@ -32,7 +32,7 @@ export default function Hero() {
         transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
       >
         <SplitText
-          text="Gift Jacksun."
+          text="Alexander."
           tag="h1"
           className="font-brico text-[clamp(1.8rem,8vw,2.5rem)] leading-none font-medium tracking-tight text-main"
           textAlign="left"
@@ -46,32 +46,20 @@ export default function Hero() {
           rootMargin="-80px"
         />
         <p className="mt-3 text-[10px] font-medium tracking-[0.22em] text-muted uppercase sm:text-sm">
-          Software Developer &bull; 5 years
+          Infrastructure &amp; Platform Engineer &bull; Lagos, Nigeria
         </p>
-        <p className="mt-4 flex max-w-md flex-wrap items-center gap-2 text-sm text-muted sm:text-base">
-          Creator of
-          <span className="flex items-center gap-1">
-            <img
-              src="https://payments.questlabs.cc/logo.svg"
-              alt="Questpay Logo"
-              className="brand-logo h-3.5 w-auto"
-            />
-            <span className="text-main underline decoration-muted/40 underline-offset-4">
-              Questpay
-            </span>
-          </span>{" "}
-          and{" "}
-          <span className="flex items-center gap-1">
-            <img
-              src="https://questbase.vercel.app/logo.svg"
-              alt="Questbase Logo"
-              className="brand-logo h-3.5 w-auto"
-            />
-            <span className="text-main underline decoration-muted/40 underline-offset-4">
-              Quest Base.
-            </span>
-          </span>
-          
+        <p className="mt-4 max-w-md text-sm text-muted sm:text-base">
+          Self-taught. I build the layer other people deploy onto — control
+          planes, node agents, and the edge in front of them. Co-founder of{" "}
+          <a
+            href="https://orzn.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-main underline decoration-muted/40 underline-offset-4 transition-colors hover:decoration-main"
+          >
+            Orizon
+          </a>
+          , a cloud platform built in Nigeria, for Africa.
         </p>
 
         <ul className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-3 text-sm text-main">

@@ -11,8 +11,10 @@ export const libraries = [
   "Framer Motion",
 ];
 
-export const GITHUB_USERNAME = "learnwithjacksun";
+export const GITHUB_USERNAME = "learnwithalex";
 
+// TODO(alex): fill in your real email before sharing this publicly — the
+// address below is a placeholder and the contact link will not reach you.
 export const socials = [
   {
     label: "Github",
@@ -21,7 +23,7 @@ export const socials = [
   },
   {
     label: "Email",
-    href: "mailto:codewithjacksun@gmail.com",
+    href: "mailto:hello@example.com",
     icon: "mail" as const,
   },
   {
@@ -45,52 +47,66 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: "questpay",
-    index: "01",
-    title: "Questpay",
-    categories: ["FINTECH", "PAYMENTS"],
-    description:
-      "A financial technology company, not a bank. Payment checkout for businesses to collect payments, built for SMBs in Nigeria with instant settlements.",
-    tech: ["REACT", "NODE.JS", "TYPESCRIPT", "APIS"],
-    year: "2026",
-    href: "https://payments.questlabs.cc/",
-    image: "questpay",
-  },
-  {
     id: "orizon",
-    index: "02",
+    index: "01",
     title: "Orizon",
-    categories: ["HOSTING", "DEPLOYMENT"],
+    categories: ["CLOUD", "INFRASTRUCTURE"],
     description:
-      "Modern deployment and hosting platform, move your whole site from cPanel in one click, with git deploys, dedicated servers, and global edge delivery.",
-    tech: ["NEXT.JS", "NODE.JS", "DOCKER", "APIS"],
+      "Agent-based cloud hosting platform for the African market. Go control plane and node agents, git deploys, managed databases, dedicated servers, and a Cloudflare edge — with a data-residency tier built for Nigeria's compliance rules.",
+    tech: ["GO", "TYPESCRIPT", "DOCKER", "POSTGRES", "NATS"],
     year: "2026",
     href: "https://orzn.io",
     image: "orizon",
   },
   {
-    id: "questbase",
-    index: "03",
-    title: "Quest Base",
-    categories: ["SAAS", "DEVELOPER TOOLS"],
+    id: "pxxl",
+    index: "02",
+    title: "pxxl.app",
+    categories: ["CLOUD", "DEPLOYMENT"],
     description:
-      "Backend primitives SaaS so you can build less backend: form2mail, OTP verification, waitlists, spam/bot protection, webhooks, and a unified API with a developer dashboard.",
-    tech: ["TYPESCRIPT", "APIS", "WEBHOOKS", "NODE.JS"],
-    year: "2026",
-    href: "https://questbase.vercel.app/",
-    image: "questbase",
+      "Nigerian deployment platform in the Vercel/Railway mould, designed and shipped solo. The proving ground for everything that became Orizon.",
+    tech: ["GO", "TYPESCRIPT", "DOCKER", "APIS"],
+    year: "2025",
+    href: "https://pxxl.app",
+    image: "pxxl",
   },
   {
-    id: "boxstreamz",
-    index: "04",
-    title: "BoxStreamz",
-    categories: ["STREAMING", "ENTERTAINMENT"],
+    id: "settlr",
+    index: "03",
+    title: "Settlr",
+    categories: ["FINTECH", "PAYMENTS"],
     description:
-      "Streaming platform for movies, TV series, anime, and live sports; browse, watch, bookmark, and download in a fast, cached Next.js experience.",
-    tech: ["NEXT.JS", "TYPESCRIPT", "TAILWIND CSS", "APIS"],
+      "Payment processing built on licensed banking rails — collections, settlement and payouts for Nigerian businesses, with a merchant dashboard and developer API.",
+    tech: ["TYPESCRIPT", "POSTGRES", "APIS", "WEBHOOKS"],
     year: "2026",
-    href: "https://boxstreamz.com/",
-    image: "boxstreamz",
+    // TODO(alex): point this at Settlr's public site when there is one.
+    href: "https://orzn.io",
+    image: "settlr",
+  },
+  {
+    id: "blincs",
+    index: "04",
+    title: "Blincs",
+    categories: ["STREAMING", "MEDIA"],
+    description:
+      "Streaming platform with a custom player, built for the African creator economy and distributed across web, mobile and Android TV.",
+    tech: ["NEXT.JS", "REACT NATIVE", "TYPESCRIPT", "TAURI"],
+    year: "2025",
+    // TODO(alex): add the public URL if/when Blincs is open to the world.
+    href: "https://orzn.io",
+    image: "blincs",
+  },
+  {
+    id: "scarletdb",
+    index: "05",
+    title: "ScarletDB",
+    categories: ["DEVELOPER TOOLS", "BAAS"],
+    description:
+      "Backend-as-a-service that provisioned managed Postgres behind a branded proxy layer. Now folded into Orizon's managed database product.",
+    tech: ["TYPESCRIPT", "POSTGRES", "APIS"],
+    year: "2025",
+    href: "https://orzn.io",
+    image: "scarletdb",
   },
 ];
 

@@ -12,7 +12,7 @@ export default function Footer() {
         >
           &copy;{year}
         </span>{" "}
-        &bull; <span>Gift Jacksun</span>
+        &bull; <span>Alexander</span>
       </p>
     </footer>
   );
