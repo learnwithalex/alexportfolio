@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" data-theme="midnight">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0"
+    />
+
+    <title>Gift Jacksun | Software Developer</title>
+    <meta
+      name="description"
+      content="Gift Jacksun — Software Developer with 5 years of experience. Creator of Questpay and Quest Base."
+    />
+    <meta name="author" content="Gift Jacksun" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Gift Jacksun" />
+    <meta property="og:title" content="Gift Jacksun | Software Developer" />
+    <meta
+      property="og:description"
+      content="Software Developer with 5 years of experience. Creator of Questpay and Quest Base."
+    />
+    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="436" />
+    <meta property="og:image:alt" content="Gift Jacksun portfolio — Software Developer, creator of Questpay and Quest Base" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Gift Jacksun | Software Developer" />
+    <meta
+      name="twitter:description"
+      content="Software Developer with 5 years of experience. Creator of Questpay and Quest Base."
+    />
+    <meta name="twitter:image" content="/og-image.png" />
+    <meta name="twitter:image:alt" content="Gift Jacksun portfolio — Software Developer, creator of Questpay and Quest Base" />
+
+    <script>
+      try {
+        var stored = localStorage.getItem("portfolio-theme");
+        if (stored) {
+          var parsed = JSON.parse(stored);
+          var theme = parsed && parsed.state && parsed.state.theme;
+          if (theme) document.documentElement.setAttribute("data-theme", theme);
+        }
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

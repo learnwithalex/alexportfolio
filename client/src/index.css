@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Geist+Pixel&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root,
+[data-theme="midnight"] {
+  --background: #0c0b09;
+  --secondary: #141210;
+  --foreground: #e8e8e8;
+  --main: #f2ede8;
+  --muted: #8a8a8a;
+  --primary: #ffffff;
+  --line: #2a2a2a;
+  --accent-gold: #b2a283;
+  --github-empty: #161b22;
+  --github-l1: #0e4429;
+  --github-l2: #006d32;
+  --github-l3: #26a641;
+  --github-l4: #39d353;
+}
+
+[data-theme="obsidian"] {
+  --background: #000000;
+  --secondary: #0a0a0a;
+  --foreground: #f5f5f5;
+  --main: #fafafa;
+  --muted: #7a7a7a;
+  --primary: #ffffff;
+  --line: #222222;
+  --accent-gold: #f2edc5;
+  --github-empty: #111111;
+  --github-l1: #0e4429;
+  --github-l2: #006d32;
+  --github-l3: #26a641;
+  --github-l4: #39d353;
+}
+
+[data-theme="slate"] {
+  --background: #0f1419;
+  --secondary: #151b22;
+  --foreground: #e7ecf3;
+  --main: #e8eef6;
+  --muted: #8b97a8;
+  --primary: #ffffff;
+  --line: #2a3340;
+  --accent-gold: #9db0c7;
+  --github-empty: #161b22;
+  --github-l1: #0e4429;
+  --github-l2: #006d32;
+  --github-l3: #26a641;
+  --github-l4: #39d353;
+}
+
+[data-theme="forest"] {
+  --background: #0a120e;
+  --secondary: #101a14;
+  --foreground: #e6f0e8;
+  --main: #e9f2eb;
+  --muted: #839388;
+  --primary: #ffffff;
+  --line: #243028;
+  --accent-gold: #a8c4ae;
+  --github-empty: #121a14;
+  --github-l1: #0e4429;
+  --github-l2: #006d32;
+  --github-l3: #26a641;
+  --github-l4: #39d353;
+}
+
+[data-theme="paper"] {
+  --background: #f4f1ea;
+  --secondary: #ebe6dc;
+  --foreground: #1c1a17;
+  --main: #1a1814;
+  --muted: #6f6a62;
+  --primary: #111111;
+  --line: #d6d0c4;
+  --accent-gold: #8a7355;
+  --github-empty: #ddd8ce;
+  --github-l1: #9be9a8;
+  --github-l2: #40c463;
+  --github-l3: #30a14e;
+  --github-l4: #216e39;
+}
+
+[data-theme="sunset"] {
+  --background: #1a0f0c;
+  --secondary: #261510;
+  --foreground: #ffe8df;
+  --main: #fff1eb;
+  --muted: #b0897c;
+  --primary: #ff6b4a;
+  --line: #3d241c;
+  --accent-gold: #ff8f6b;
+  --github-empty: #2a1814;
+  --github-l1: #7c2d12;
+  --github-l2: #c2410c;
+  --github-l3: #ea580c;
+  --github-l4: #fb923c;
+}
+
+[data-theme="ocean"] {
+  --background: #07111f;
+  --secondary: #0c1a2e;
+  --foreground: #dcecff;
+  --main: #eaf4ff;
+  --muted: #7f97b5;
+  --primary: #3aa0ff;
+  --line: #1c2f4a;
+  --accent-gold: #5eb3ff;
+  --github-empty: #0d1828;
+  --github-l1: #0c4a6e;
+  --github-l2: #0284c7;
+  --github-l3: #0ea5e9;
+  --github-l4: #38bdf8;
+}
+
+[data-theme="violet"] {
+  --background: #120818;
+  --secondary: #1c0f28;
+  --foreground: #f0e4ff;
+  --main: #f6edff;
+  --muted: #9b87b3;
+  --primary: #a855f7;
+  --line: #332044;
+  --accent-gold: #c084fc;
+  --github-empty: #1a1024;
+  --github-l1: #581c87;
+  --github-l2: #7e22ce;
+  --github-l3: #a855f7;
+  --github-l4: #d8b4fe;
+}
+
+[data-theme="rose"] {
+  --background: #160811;
+  --secondary: #230f1b;
+  --foreground: #ffe4f1;
+  --main: #fff0f7;
+  --muted: #b0849a;
+  --primary: #f43f8c;
+  --line: #3b1a2c;
+  --accent-gold: #fb7185;
+  --github-empty: #1f0f18;
+  --github-l1: #9d174d;
+  --github-l2: #db2777;
+  --github-l3: #f43f8c;
+  --github-l4: #f9a8d4;
+}
+
+[data-theme="aurora"] {
+  --background: #061412;
+  --secondary: #0b1f1c;
+  --foreground: #d9fff7;
+  --main: #e9fffb;
+  --muted: #7aa8a0;
+  --primary: #2dd4bf;
+  --line: #1a3531;
+  --accent-gold: #5eead4;
+  --github-empty: #0c1c19;
+  --github-l1: #115e59;
+  --github-l2: #0d9488;
+  --github-l3: #14b8a6;
+  --github-l4: #2dd4bf;
+}
+
+[data-theme="citrus"] {
+  --background: #101406;
+  --secondary: #181e0a;
+  --foreground: #f4ffd6;
+  --main: #f8ffe6;
+  --muted: #97a572;
+  --primary: #a3e635;
+  --line: #2c3516;
+  --accent-gold: #bef264;
+  --github-empty: #161c0b;
+  --github-l1: #3f6212;
+  --github-l2: #65a30d;
+  --github-l3: #84cc16;
+  --github-l4: #a3e635;
+}
+
+[data-theme="candy"] {
+  --background: #fff5fb;
+  --secondary: #ffe9f4;
+  --foreground: #3b1430;
+  --main: #2d1024;
+  --muted: #9a6b86;
+  --primary: #ec4899;
+  --line: #f3c6dd;
+  --accent-gold: #db2777;
+  --github-empty: #f7dceb;
+  --github-l1: #f9a8d4;
+  --github-l2: #f472b6;
+  --github-l3: #ec4899;
+  --github-l4: #db2777;
+}
+
+@theme inline {
+  --font-sans: "Urbanist", sans-serif;
+  --font-display: "Playfair Display", serif;
+  --font-pixel: "Geist Pixel", sans-serif;
+  --font-brico: "Bricolage Grotesque", serif;
+  --font-bitcount: "Bitcount Prop Single", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-secondary: var(--secondary);
+  --color-main: var(--main);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-primary: var(--primary);
+  --color-accent-gold: var(--accent-gold);
+  --color-github-empty: var(--github-empty);
+  --color-github-l1: var(--github-l1);
+  --color-github-l2: var(--github-l2);
+  --color-github-l3: var(--github-l3);
+  --color-github-l4: var(--github-l4);
+}
+
+* {
+  @apply outline-none;
+  scrollbar-width: thin;
+  scrollbar-color: #6a6a6a transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6a6a6a;
+  border-radius: 9999px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #8a8a8a;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+body {
+  @apply bg-background text-main font-inter antialiased transition-colors duration-300;
+}
+
+.main {
+  @apply max-w-[90%] xl:max-w-[880px] mx-auto;
+}
+
+.layout {
+  @apply max-w-[90%] xl:max-w-[880px] mx-auto;
+}
+
+.center {
+  @apply flex items-center justify-center;
+}
+
+
+.btn {
+  @apply cursor-pointer flex items-center justify-center gap-2 disabled:opacity-50;
+}
+
+.btn-primary {
+  @apply text-background flex items-center justify-center gap-2 bg-primary font-semibold;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  @apply hidden;
+}
+
+.hide-scrollbar::-webkit-scrollbar-thumb {
+  @apply hidden;
+}
+
+.brand-logo {
+  filter: brightness(0) invert(1);
+}
+
+[data-theme="paper"] .brand-logo,
+[data-theme="candy"] .brand-logo {
+  filter: brightness(0);
+}
+
+@keyframes featured-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.featured-marquee {
+  animation: featured-marquee 45s linear infinite;
+  will-change: transform;
+}
+
+.featured-gallery:hover .featured-marquee {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .featured-marquee {
+    animation: none;
+  }
+}
+
+.stack-icon-mono {
+  filter: invert(1);
+}
+
+[data-theme="paper"] .stack-icon-mono,
+[data-theme="candy"] .stack-icon-mono {
+  filter: none;
+}
