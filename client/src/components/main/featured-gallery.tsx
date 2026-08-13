@@ -2,19 +2,22 @@ import { useState } from "react";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Image01Icon } from "@hugeicons/core-free-icons";
 import orizonImg from "@/assets/projects/orizon.png";
+import pxxlImg from "@/assets/projects/pxxl.png";
+import settlrImg from "@/assets/projects/settlr.png";
 
 type GalleryItem = {
   src?: string;
   alt: string;
 };
 
-// TODO(alex): drop screenshots into src/assets/projects/ and wire them up the
-// same way as orizonImg. A frame with no `src` renders an empty placeholder
-// rather than a broken image, so this is safe to ship half-filled.
+// Captured from the live sites by scripts/shoot-projects.mjs — re-run it to
+// refresh. Blincs and ScarletDB are missing on purpose: at capture time they
+// were returning 525 and 402, and a screenshot of an error page is worse than
+// an empty frame. Re-run the script once they are back and they slot in here.
 const FRAMES: GalleryItem[] = [
   { src: orizonImg, alt: "Orizon landing page" },
-  { alt: "pxxl.app dashboard" },
-  { alt: "Settlr merchant dashboard" },
+  { src: settlrImg, alt: "Settlr landing page" },
+  { src: pxxlImg, alt: "pxxl.app landing page" },
   { alt: "Blincs streaming interface" },
 ];
 

@@ -40,20 +40,21 @@ export const contactSchema = z.object({
 
 export type ContactFormValues = z.infer<typeof contactSchema>;
 
-// TODO(alex): your real address — this is what the contact page shows and what
-// the form falls back to while CONTACT_FORM_URL is empty.
-export const CONTACT_EMAIL = "hello@example.com";
-// TODO(alex): your WhatsApp number in international format, no + or spaces.
-export const WHATSAPP_NUMBER = "2340000000000";
+export const CONTACT_EMAIL = "alex@orzn.io";
+export const WHATSAPP_NUMBER = "2348102581339";
 export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 /**
  * Where the contact form POSTs.
  *
- * DELIBERATELY EMPTY. The original pointed at a form endpoint belonging to the
- * developer this template came from, so every enquiry sent through this page
- * would have landed in HIS inbox — silently, and looking like success. Until
- * you put your own endpoint here (Formspree, Web3Forms, your own API, …) the
- * form refuses to submit and points people at email instead.
+ * Empty until the form API exists. It is NOT a leftover: the template shipped
+ * pointing at a form endpoint belonging to its original author, so enquiries
+ * would have landed in his inbox while the page showed a success modal. With
+ * no endpoint set, the form composes a pre-filled email to CONTACT_EMAIL
+ * instead — which works today, with no backend, and cannot silently deliver
+ * someone's message to the wrong person.
+ *
+ * Set this to your own endpoint and the form POSTs to it instead; no other
+ * change needed.
  */
 export const CONTACT_FORM_URL = "";

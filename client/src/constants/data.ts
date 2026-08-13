@@ -13,8 +13,6 @@ export const libraries = [
 
 export const GITHUB_USERNAME = "learnwithalex";
 
-// TODO(alex): fill in your real email before sharing this publicly — the
-// address below is a placeholder and the contact link will not reach you.
 export const socials = [
   {
     label: "Github",
@@ -22,10 +20,21 @@ export const socials = [
     icon: "github" as const,
   },
   {
+    label: "X",
+    href: "https://x.com/heisalexie",
+    icon: "x" as const,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/heisalexies",
+    icon: "linkedin" as const,
+  },
+  {
     label: "Email",
-    href: "mailto:hello@example.com",
+    href: "mailto:alex@orzn.io",
     icon: "mail" as const,
   },
+  // TODO(alex): drop a resume.pdf into client/public/ — this 404s until you do.
   {
     label: "Resume",
     href: "/resume.pdf",
@@ -79,8 +88,7 @@ export const projects: Project[] = [
       "Payment processing built on licensed banking rails — collections, settlement and payouts for Nigerian businesses, with a merchant dashboard and developer API.",
     tech: ["TYPESCRIPT", "POSTGRES", "APIS", "WEBHOOKS"],
     year: "2026",
-    // TODO(alex): point this at Settlr's public site when there is one.
-    href: "https://orzn.io",
+    href: "https://payments.afriversedao.org",
     image: "settlr",
   },
   {
@@ -92,8 +100,7 @@ export const projects: Project[] = [
       "Streaming platform with a custom player, built for the African creator economy and distributed across web, mobile and Android TV.",
     tech: ["NEXT.JS", "REACT NATIVE", "TYPESCRIPT", "TAURI"],
     year: "2025",
-    // TODO(alex): add the public URL if/when Blincs is open to the world.
-    href: "https://orzn.io",
+    href: "https://blincs.afriversedao.org",
     image: "blincs",
   },
   {
@@ -105,7 +112,7 @@ export const projects: Project[] = [
       "Backend-as-a-service that provisioned managed Postgres behind a branded proxy layer. Now folded into Orizon's managed database product.",
     tech: ["TYPESCRIPT", "POSTGRES", "APIS"],
     year: "2025",
-    href: "https://orzn.io",
+    href: "https://scarletdb.space",
     image: "scarletdb",
   },
 ];

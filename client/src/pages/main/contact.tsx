@@ -52,10 +52,24 @@ export default function Contact() {
     const country = countries.find((c) => c.code === values.country);
     const inquiry = inquiryTypes.find((t) => t.value === values.type);
 
-    // No endpoint configured yet — say so plainly rather than posting into the
-    // void (or, worse, into someone else's inbox) and reporting success.
+    // No endpoint yet: hand the message to the visitor's mail client, pre-filled,
+    // rather than posting into the void and showing a success modal. They still
+    // have to press send, so the success state below would be a lie — we tell
+    // them what happened instead.
     if (!CONTACT_FORM_URL) {
-      toast.error(`Contact form isn't wired up yet — email ${CONTACT_EMAIL} instead.`);
+      const subject = `Portfolio enquiry — ${inquiry?.label ?? values.type}`;
+      const body = [
+        `Name: ${values.name}`,
+        `Email: ${values.email}`,
+        `Country: ${country?.name ?? values.country}`,
+        `Type: ${inquiry?.label ?? values.type}`,
+        "",
+        values.message,
+      ].join("\n");
+      window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+        subject,
+      )}&body=${encodeURIComponent(body)}`;
+      toast.success("Opening your email app — press send and it reaches me.");
       return;
     }
 
