@@ -100,7 +100,7 @@ export const projects: Project[] = [
       "Streaming platform with a custom player, built for the African creator economy and distributed across web, mobile and Android TV.",
     tech: ["NEXT.JS", "REACT NATIVE", "TYPESCRIPT", "TAURI"],
     year: "2025",
-    href: "https://blincs.afriversedao.org",
+    href: "https://blincs.orzn.app",
     image: "blincs",
   },
   {

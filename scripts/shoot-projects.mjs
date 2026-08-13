@@ -21,7 +21,7 @@ const TARGETS = [
   { id: "orizon", url: "https://orzn.io" },
   { id: "pxxl", url: "https://pxxl.app" },
   { id: "settlr", url: "https://payments.afriversedao.org" },
-  { id: "blincs", url: "https://blincs.afriversedao.org" },
+  { id: "blincs", url: "https://blincs.orzn.app" },
   { id: "scarletdb", url: "https://scarletdb.space" },
 ];
 
@@ -59,8 +59,12 @@ for (const t of TARGETS) {
 
     // Let entrance animations finish so nothing is caught mid-fade.
     await page.waitForTimeout(2500);
+    // JPEG for photo-heavy pages: Blincs' poster hero was 1.1MB as PNG and 95KB
+    // as JPEG with no visible difference in a 420px gallery frame.
+    const photographic = t.id === "blincs";
     await page.screenshot({
-      path: `${OUT}/${t.id}.png`,
+      path: `${OUT}/${t.id}.${photographic ? "jpg" : "png"}`,
+      ...(photographic ? { type: "jpeg", quality: 82 } : {}),
       clip: { x: 0, y: 0, width: 1440, height: 900 },
     });
     results.push({ id: t.id, status, shot: true });

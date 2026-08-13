@@ -4,6 +4,7 @@ import { Image01Icon } from "@hugeicons/core-free-icons";
 import orizonImg from "@/assets/projects/orizon.png";
 import pxxlImg from "@/assets/projects/pxxl.png";
 import settlrImg from "@/assets/projects/settlr.png";
+import blincsImg from "@/assets/projects/blincs.jpg";
 
 type GalleryItem = {
   src?: string;
@@ -11,14 +12,13 @@ type GalleryItem = {
 };
 
 // Captured from the live sites by scripts/shoot-projects.mjs — re-run it to
-// refresh. Blincs and ScarletDB are missing on purpose: at capture time they
-// were returning 525 and 402, and a screenshot of an error page is worse than
-// an empty frame. Re-run the script once they are back and they slot in here.
+// refresh. ScarletDB is absent on purpose: it returns 402, and the script skips
+// error pages because a screenshot of an error is worse than a missing frame.
 const FRAMES: GalleryItem[] = [
   { src: orizonImg, alt: "Orizon landing page" },
   { src: settlrImg, alt: "Settlr landing page" },
   { src: pxxlImg, alt: "pxxl.app landing page" },
-  { alt: "Blincs streaming interface" },
+  { src: blincsImg, alt: "Blincs streaming platform" },
 ];
 
 function Peg({ className }: { className: string }) {
