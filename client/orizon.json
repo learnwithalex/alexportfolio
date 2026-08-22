@@ -1,0 +1,23 @@
+{
+  "$schema": "https://orzn.io/schema/orizon.json",
+  "projectId": "proj_alexportfolio",
+  "name": "alexportfolio",
+  "framework": "static",
+  "servingMode": "static",
+  "productionBranch": "main",
+  "rootDirectory": "client",
+  "url": "https://alex.orzn.io",
+  "orizon": {
+    "dashboard": "https://dashboard.orizon.ng/projects/proj_alexportfolio",
+    "api": "https://api.orizon.ng/api/v1",
+    "openapi": "https://api.orizon.ng/api/v1/openapi.json",
+    "mcp": {
+      "command": "orizon",
+      "args": [
+        "mcp"
+      ]
+    },
+    "docs": "https://orzn.io/docs",
+    "llms": "https://orzn.io/llms.txt"
+  }
+}
