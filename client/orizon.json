@@ -6,7 +6,7 @@
   "servingMode": "static",
   "productionBranch": "main",
   "rootDirectory": "client",
-  "url": "https://alex.orzn.io",
+  "url": "https://alex.am.in",
   "orizon": {
     "dashboard": "https://dashboard.orizon.ng/projects/proj_alexportfolio",
     "api": "https://api.orizon.ng/api/v1",
